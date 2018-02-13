@@ -1,30 +1,42 @@
 import React from "react"
 import Helmet from "react-helmet"
+import GatsbyLink from "gatsby-link"
+import { PageWrapper, Header, Title, NavLinks, ContentWrapper } from "./styles"
 
-import Header from "../components/Header"
-import "./index.css"
-
-const TemplateWrapper = ({ children }: { children: () => React.ReactNode }) => (
-  <div>
+const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
+  <PageWrapper>
     <Helmet
-      title="Gatsby Default Starter"
+      title="hi there"
       meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" },
+        { name: "description", content: "kingdaro's website" },
+        { name: "keywords", content: "kingdaro, website, blog" },
       ]}
     />
-    <Header />
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: 960,
-        padding: "0px 1.0875rem 1.45rem",
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
+
+    <Header>
+      <Title>
+        <h1>kingdaro</h1>
+        <h2>programmer, electronic producer, gamer</h2>
+      </Title>
+
+      <NavLinks>
+        <h5>
+          <GatsbyLink to="/">Home</GatsbyLink>
+        </h5>
+        <h5>
+          <GatsbyLink to="/blog">Blog</GatsbyLink>
+        </h5>
+        <h5>
+          <GatsbyLink to="/projects">Projects</GatsbyLink>
+        </h5>
+        <h5>
+          <GatsbyLink to="/contact">Contact</GatsbyLink>
+        </h5>
+      </NavLinks>
+    </Header>
+
+    <ContentWrapper>{children()}</ContentWrapper>
+  </PageWrapper>
 )
 
-export default TemplateWrapper
+export default IndexTemplate
