@@ -1,6 +1,6 @@
 import React from "react"
 import GatsbyLink from "gatsby-link"
-import { social } from "../links"
+import { social, routes } from "../links"
 
 const IndexPage = () => (
   <React.Fragment>
@@ -25,7 +25,9 @@ const IndexPage = () => (
     </p>
     <b>
       Currently available for hire.{" "}
-      <GatsbyLink to="/contact">Contact me if you're interested!</GatsbyLink>
+      <GatsbyLink to={routes.contact}>
+        Contact me if you're interested!
+      </GatsbyLink>
     </b>
   </React.Fragment>
 )

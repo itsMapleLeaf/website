@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import GatsbyLink from "gatsby-link"
 import { PageWrapper, Header, Title, NavLinks, ContentWrapper } from "./styles"
+import { routes } from "../links"
 
 const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
   <PageWrapper>
@@ -21,16 +22,16 @@ const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
 
       <NavLinks>
         <h5>
-          <GatsbyLink to="/">Home</GatsbyLink>
+          <GatsbyLink to={routes.home}>Home</GatsbyLink>
         </h5>
         <h5>
-          <GatsbyLink to="/blog">Blog</GatsbyLink>
+          <GatsbyLink to={routes.blog}>Blog</GatsbyLink>
         </h5>
         <h5>
-          <GatsbyLink to="/projects">Projects</GatsbyLink>
+          <GatsbyLink to={routes.projects}>Projects</GatsbyLink>
         </h5>
         <h5>
-          <GatsbyLink to="/contact">Contact</GatsbyLink>
+          <GatsbyLink to={routes.contact}>Contact</GatsbyLink>
         </h5>
       </NavLinks>
     </Header>

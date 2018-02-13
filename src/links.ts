@@ -4,3 +4,10 @@ export const social = {
   youtube: "https://youtube.com/c/kingdaro",
   github: "https://github.com/kingdaro",
 }
+
+export const routes = {
+  home: "/",
+  blog: "/blog",
+  projects: "/projects",
+  contact: "/contact",
+}
