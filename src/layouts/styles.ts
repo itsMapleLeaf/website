@@ -18,7 +18,7 @@ injectGlobal`
   html, body {
     font: 17px ${bodyFont};
     color: ${textColor};
-    line-height: 1.3;
+    line-height: 1.4;
     letter-spacing: 0.5px;
 
     padding: 0;
