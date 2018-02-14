@@ -1,4 +1,4 @@
-export const social = {
+export const socialLinks = {
   soundcloud: "https://soundcloud.com/kingdaro",
   twitter: "https://twitter.com/kingdaro_",
   youtube: "https://youtube.com/c/kingdaro",

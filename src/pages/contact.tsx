@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { social } from "../links"
+import { socialLinks } from "../constants"
 
 const ContactLinks = styled.ul`
   li {
@@ -18,22 +18,22 @@ const Contact = () => (
     <p>You can follow me on...</p>
     <ContactLinks>
       <li>
-        <a href={social.twitter}>twitter</a>
+        <a href={socialLinks.twitter}>twitter</a>
       </li>
       <li>
-        <a href={social.github}>github</a>
+        <a href={socialLinks.github}>github</a>
       </li>
       <li>
-        <a href={social.soundcloud}>soundcloud</a>
+        <a href={socialLinks.soundcloud}>soundcloud</a>
       </li>
       <li>
-        <a href={social.twitch}>twitch</a>
+        <a href={socialLinks.twitch}>twitch</a>
       </li>
       <li>
-        <a href={social.devto}>dev.to</a>
+        <a href={socialLinks.devto}>dev.to</a>
       </li>
       <li>
-        <a href={social.youtube}>youtube</a>{" "}
+        <a href={socialLinks.youtube}>youtube</a>{" "}
         <SubText>(i don't use it much though)</SubText>
       </li>
     </ContactLinks>

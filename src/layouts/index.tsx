@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import GatsbyLink from "gatsby-link"
 import { PageWrapper, Header, Title, NavLinks, ContentWrapper } from "./styles"
-import { routes } from "../links"
+import { routes } from "../constants"
 
 const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
   <PageWrapper>

@@ -1,6 +1,6 @@
 import React from "react"
 import GatsbyLink from "gatsby-link"
-import { social, routes } from "../links"
+import { socialLinks, routes } from "../constants"
 
 const IndexPage = () => (
   <React.Fragment>
@@ -10,17 +10,19 @@ const IndexPage = () => (
       a few years, in anything from games, mobile, web, or whatever else I feel
       like dipping my toes into. Right now I'm focusing on frontend web
       development, using React and TypeScript. You can view what I'm working on
-      at my <a href={social.github}>GitHub</a>. On occasion, if there's an
+      at my <a href={socialLinks.github}>GitHub</a>. On occasion, if there's an
       interesting subject that pops up every now and again, I'll blog about it.
     </p>
     <p>
       I've been producing music for a while now as well, primarily electronic.
-      You can listen to my tracks on <a href={social.soundcloud}>SoundCloud</a>.
+      You can listen to my tracks on{" "}
+      <a href={socialLinks.soundcloud}>SoundCloud</a>.
     </p>
     <p>
       Outside of production and coding, I enjoy gaming (usually rhythm games!),
       helping people out on Discord and Stack Overflow, being silly on{" "}
-      <a href={social.twitter}>Twitter</a>, and spending time with my family.
+      <a href={socialLinks.twitter}>Twitter</a>, and spending time with my
+      family.
     </p>
     <strong>
       Currently available for hire.{" "}
