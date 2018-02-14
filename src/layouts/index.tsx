@@ -10,7 +10,7 @@ const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
       title={`${title} - ${tagline}`}
       meta={[
         { name: "description", content: `${title} - ${tagline}` },
-        { name: "keywords", content: "kingdaro, website, blog" },
+        { name: "keywords", content: "kingdaro, website, blog, programming" },
       ]}
     />
 
