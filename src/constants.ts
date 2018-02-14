@@ -16,3 +16,5 @@ export const routes = {
 
 export const title = "kingdaro"
 export const tagline = "programmer, electronic producer, gamer"
+
+export const email = "kingdaro6@gmail.com"

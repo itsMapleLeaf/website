@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { socialLinks } from "../constants"
+import ContactForm from "../components/ContactForm"
+import { socialLinks, email } from "../constants"
 
 const ContactLinks = styled.ul`
   li {
@@ -37,6 +38,12 @@ const Contact = () => (
         <SubText>(i don't use it much though)</SubText>
       </li>
     </ContactLinks>
+
+    <p>
+      If you'd like to contact me directly, email me at{" "}
+      <a href={"mailto:" + email}>{email}</a>, or use the form below.
+    </p>
+    <ContactForm />
   </React.Fragment>
 )
 

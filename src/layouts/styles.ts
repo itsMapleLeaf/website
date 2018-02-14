@@ -63,6 +63,19 @@ injectGlobal`
   strong {
     font-weight: 500;
   }
+
+  fieldset {
+    border: none;
+  }
+
+  input, button, textarea {
+    font: inherit;
+    font-size: 0.9rem;
+    color: inherit;
+    background: ${darken(0.1, themeColor)};
+    border: none;
+    padding: 0.4rem 0.75rem;
+  }
 `
 
 export const PageWrapper = styled.main`
@@ -115,7 +128,7 @@ export const NavLinks = styled.nav`
     font-weight: 400;
   }
 
-  a {
+  h5:not(:first-child) {
     margin-left: 1.25rem;
   }
 `
