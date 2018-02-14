@@ -2,22 +2,22 @@ import React from "react"
 import Helmet from "react-helmet"
 import GatsbyLink from "gatsby-link"
 import { PageWrapper, Header, Title, NavLinks, ContentWrapper } from "./styles"
-import { routes } from "../constants"
+import { routes, title, tagline } from "../constants"
 
 const IndexTemplate = ({ children }: { children: () => React.ReactNode }) => (
   <PageWrapper>
     <Helmet
-      title="hi there"
+      title={`${title} - ${tagline}`}
       meta={[
-        { name: "description", content: "kingdaro's website" },
+        { name: "description", content: `${title} - ${tagline}` },
         { name: "keywords", content: "kingdaro, website, blog" },
       ]}
     />
 
     <Header>
       <Title>
-        <h1>kingdaro</h1>
-        <h2>programmer, electronic producer, gamer</h2>
+        <h1>{title}</h1>
+        <h2>{tagline}</h2>
       </Title>
 
       <NavLinks>

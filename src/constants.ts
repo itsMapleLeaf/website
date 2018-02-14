@@ -13,3 +13,6 @@ export const routes = {
   projects: "/projects",
   contact: "/contact",
 }
+
+export const title = "kingdaro"
+export const tagline = "programmer, electronic producer, gamer"
