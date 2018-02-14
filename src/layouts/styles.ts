@@ -1,5 +1,9 @@
 import styled, { injectGlobal } from "styled-components"
 import { darken, lighten } from "polished"
+import "./fonts.css"
+
+const headerFont = "Roboto Condensed, sans-serif"
+const bodyFont = "Noto Sans, sans-serif"
 
 const themeColor = "rgb(44, 62, 80)"
 const textColor = "rgb(236, 240, 241)"
@@ -11,19 +15,23 @@ injectGlobal`
 
   html, body {
     background-color: ${darken(0.1, themeColor)};
-    font: 16px Roboto, sans-serif;
+    font: 17px ${bodyFont};
     color: ${textColor};
     padding: 0;
     margin: 0;
     line-height: 1.3;
+    letter-spacing: 0.5px;
   }
 
   a {
     color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
   }
 
   a:hover {
-    text-decoration: none;
+    border: none;
   }
 
   p {
@@ -31,7 +39,7 @@ injectGlobal`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: ${headerFont};
     font-weight: 300;
     margin: 0.75rem 0;
   }
