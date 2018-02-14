@@ -10,7 +10,7 @@ injectGlobal`
   }
 
   html, body {
-    background-color: ${darken(0.05, themeColor)};
+    background-color: ${darken(0.1, themeColor)};
     font: 16px Roboto, sans-serif;
     color: ${textColor};
     padding: 0;
@@ -42,6 +42,10 @@ injectGlobal`
   h4 { font-size: 1.25rem; }
   h5 { font-size: 1.1rem; }
   h6 { font-size: 1rem; }
+
+  strong {
+    font-weight: 500;
+  }
 `
 
 export const PageWrapper = styled.main`
@@ -50,12 +54,18 @@ export const PageWrapper = styled.main`
 
   display: flex;
   flex-direction: column;
+
+  > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `
 
 export const Header = styled.header`
   background-color: ${lighten(0.025, themeColor)};
-  align-self: stretch;
-  padding: 0.6rem 1rem;
+  align-self: center;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
 
   display: flex;
   justify-content: space-between;
@@ -63,7 +73,7 @@ export const Header = styled.header`
 `
 
 export const Title = styled.section`
-  margin: 0.5rem;
+  margin: 0.6rem 0 0.6rem;
 
   h1,
   h2 {
@@ -89,7 +99,7 @@ export const NavLinks = styled.nav`
   }
 
   a {
-    padding: 0.8rem;
+    margin-left: 1.25rem;
   }
 `
 
