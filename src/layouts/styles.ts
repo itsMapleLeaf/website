@@ -2,6 +2,8 @@ import styled, { injectGlobal } from "styled-components"
 import { darken, lighten } from "polished"
 import "./fonts.css"
 
+// const backgroundImageUrl = require("../assets/bg1.jpg")
+
 const headerFont = "Roboto Condensed, sans-serif"
 const bodyFont = "Noto Sans, sans-serif"
 
@@ -14,13 +16,20 @@ injectGlobal`
   }
 
   html, body {
-    background-color: ${darken(0.1, themeColor)};
     font: 17px ${bodyFont};
     color: ${textColor};
-    padding: 0;
-    margin: 0;
     line-height: 1.3;
     letter-spacing: 0.5px;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: ${darken(0.1, themeColor)};
+
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
   }
 
   a {
@@ -44,11 +53,11 @@ injectGlobal`
     margin: 0.75rem 0;
   }
 
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.1rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.35rem; }
+  h4 { font-size: 1.15rem; }
+  h5 { font-size: 1.05rem; }
   h6 { font-size: 1rem; }
 
   strong {
