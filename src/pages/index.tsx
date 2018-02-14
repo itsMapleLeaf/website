@@ -2,7 +2,7 @@ import React from "react"
 import GatsbyLink from "gatsby-link"
 import { socialLinks, routes } from "../constants"
 
-const IndexPage = () => (
+const HomePage = () => (
   <React.Fragment>
     <h1>hi there!</h1>
     <p>
@@ -33,4 +33,4 @@ const IndexPage = () => (
   </React.Fragment>
 )
 
-export default IndexPage
+export default HomePage

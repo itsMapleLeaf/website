@@ -14,7 +14,7 @@ const SubText = styled.span`
   font-style: italic;
 `
 
-const Contact = () => (
+const ContactPage = () => (
   <React.Fragment>
     <p>You can follow me on...</p>
     <ContactLinks>
@@ -47,4 +47,4 @@ const Contact = () => (
   </React.Fragment>
 )
 
-export default Contact
+export default ContactPage
