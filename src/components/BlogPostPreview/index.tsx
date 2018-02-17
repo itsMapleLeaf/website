@@ -31,11 +31,11 @@ const ArticleLink = styled(GatsbyLink)`
 type Props = {
   title: string
   description: string
-  location: string
+  path: string
 }
 
 const BlogPostPreview = (props: Props) => (
-  <ArticleLink to={props.location}>
+  <ArticleLink to={props.path}>
     <h1>{props.title}</h1>
     <h2>{props.description}</h2>
   </ArticleLink>

@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter",
+    title: "kingdaro's website",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
     "gatsby-plugin-styled-components",
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/posts`,
+        name: "markdown-pages",
+      },
+    },
+    "gatsby-transformer-remark",
   ],
 }

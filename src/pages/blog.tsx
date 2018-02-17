@@ -8,19 +8,27 @@ const Container = styled.div`
   }
 `
 
-const BlogPage = () => (
-  <Container>
-    <BlogPostPreview
-      title="awesome post 1"
-      description="this post is pretty awesome"
-      location="/"
-    />
-    <BlogPostPreview
-      title="awesome post 2"
-      description="this post is probably even more awesome"
-      location="/"
-    />
-  </Container>
-)
+const BlogPage = (props: { data: { allMarkdownRemark: { edges: any[] } } }) => {
+  // const posts = props.data.allMarkdownRemark.edges
+  //   .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+  //   .map(edge => (
+  //     <div>{JSON.stringify(edge.node)}</div>
+  //   ));
+
+  return (
+    <Container>
+      <BlogPostPreview
+        title="awesome post 1"
+        description="this post is pretty awesome"
+        path="/"
+      />
+      <BlogPostPreview
+        title="awesome post 2"
+        description="this post is probably even more awesome"
+        path="/"
+      />
+    </Container>
+  )
+}
 
 export default BlogPage
