@@ -12,7 +12,12 @@ const BlogPage = (props: { data: { allMarkdownRemark: { edges: any[] } } }) => {
   const posts = props.data.allMarkdownRemark.edges.map(edge => {
     const { title, description, path } = edge.node.frontmatter
     return (
-      <BlogPostPreview title={title} description={description} path={path} />
+      <BlogPostPreview
+        key={edge.node.id}
+        title={title}
+        description={description}
+        path={path}
+      />
     )
   })
 
