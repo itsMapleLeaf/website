@@ -41,9 +41,8 @@ const ContactPage = () => (
 
     <p>
       If you'd like to contact me directly, email me at{" "}
-      <a href={"mailto:" + email}>{email}</a>, or use the form below.
+      <a href={"mailto:" + email}>{email}</a>.
     </p>
-    <ContactForm />
   </React.Fragment>
 )
 
