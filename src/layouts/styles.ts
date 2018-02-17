@@ -61,7 +61,7 @@ injectGlobal`
   h6 { font-size: 1rem; }
 
   strong {
-    font-weight: 500;
+    font-weight: 700;
   }
 
   fieldset {
