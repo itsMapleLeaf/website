@@ -116,7 +116,7 @@ export const Title = styled.section`
 
   h2 {
     font-size: 1.2rem;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 `
 
