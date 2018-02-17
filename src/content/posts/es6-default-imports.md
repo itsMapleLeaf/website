@@ -1,7 +1,7 @@
 ---
 path: /blog/es6-default-imports
 title: 'ES6 Modules and Default Imports'
-description: An attempt at diffusing the confusion associated with it
+description: An attempt at diffusing the confusion
 date: 2017-11-5
 tags: javascript es6 modules
 ---
