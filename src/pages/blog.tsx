@@ -9,26 +9,33 @@ const Container = styled.div`
 `
 
 const BlogPage = (props: { data: { allMarkdownRemark: { edges: any[] } } }) => {
-  // const posts = props.data.allMarkdownRemark.edges
-  //   .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-  //   .map(edge => (
-  //     <div>{JSON.stringify(edge.node)}</div>
-  //   ));
+  const posts = props.data.allMarkdownRemark.edges.map(edge => {
+    const { title, description, path } = edge.node.frontmatter
+    return (
+      <BlogPostPreview title={title} description={description} path={path} />
+    )
+  })
 
-  return (
-    <Container>
-      <BlogPostPreview
-        title="awesome post 1"
-        description="this post is pretty awesome"
-        path="/"
-      />
-      <BlogPostPreview
-        title="awesome post 2"
-        description="this post is probably even more awesome"
-        path="/"
-      />
-    </Container>
-  )
+  return <Container>{posts}</Container>
 }
 
 export default BlogPage
+
+// @ts-ignore
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            path
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
