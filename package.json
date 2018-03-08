@@ -5,7 +5,7 @@
   "author": "kingdaro",
   "license": "MIT",
   "scripts": {
-    "start": "browser-sync start --server src --watch src/*",
+    "start": "browser-sync start --server src --watch src/* --port 8080 --tunnel",
     "deploy": "surge src"
   },
   "dependencies": {},
