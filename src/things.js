@@ -12,6 +12,8 @@ const things = [
   "get stuff done",
   "solve problems",
   "make games",
+  "produce music",
+  "listen to electronic",
   "mash keys in rhythm games",
   "eat pizza",
   "contribute to OSS",

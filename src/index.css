@@ -9,6 +9,7 @@ body {
   color: hsl(224, 73%, 97%);
   font: 16pt "Roboto Condensed", sans-serif;
   letter-spacing: 0.5px;
+  height: 100vh;
 }
 
 h1,
@@ -27,6 +28,9 @@ section {
 
 .website-content {
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .title {
@@ -35,7 +39,6 @@ section {
 
 .subtitle {
   font-size: 200%;
-  margin-bottom: 50px;
 }
 
 .subtitle .pretext {
@@ -61,6 +64,24 @@ section {
 
 .highlight {
   display: inline-block;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.links {
+  justify-self: flex-end;
+}
+
+.links a {
+  opacity: 0.75;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 @media (max-width: 750px) {
