@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(218, 42%, 9%);
+  color: hsl(224, 73%, 97%);
+  font: 16pt "Roboto Condensed", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.website-content {
+  padding: 100px;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.subtitle {
+  font-size: 40px;
+}
+
+.subtitle .pretext {
+  opacity: 0.5;
+}
+
+.social-links {
+  margin: 16px 0;
+}
+
+.social-links > * + * {
+  margin-left: 5px;
+}
+
+.social-link {
+  opacity: 0.6;
+  transition: 0.3s opacity;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
