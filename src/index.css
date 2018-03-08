@@ -26,11 +26,11 @@ a {
 }
 
 .title {
-  font-size: 80px;
+  font-size: 400%;
 }
 
 .subtitle {
-  font-size: 40px;
+  font-size: 200%;
 }
 
 .subtitle .pretext {
@@ -52,4 +52,18 @@ a {
 
 .social-link:hover {
   opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .website-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
 }
