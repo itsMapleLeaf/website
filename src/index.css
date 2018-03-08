@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+section {
+  margin-bottom: 2rem;
+}
+
 .website-content {
   padding: 100px;
 }
@@ -39,6 +43,7 @@ a {
 
 .social-links {
   margin: 16px 0;
+  font-size: 150%;
 }
 
 .social-links > * + * {
@@ -54,11 +59,19 @@ a {
   opacity: 1;
 }
 
+.highlight {
+  display: inline-block;
+}
+
 @media (max-width: 750px) {
   .website-content {
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+  }
+
+  .highlight {
+    display: block;
   }
 }
 
