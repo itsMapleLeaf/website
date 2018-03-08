@@ -93,6 +93,7 @@ section {
 
   .highlight {
     display: block;
+    height: 100px;
   }
 }
 
