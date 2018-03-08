@@ -7,7 +7,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url .",
-    "deploy": "npm run build && surge src"
+    "deploy": "npm run build && surge dist"
   },
   "dependencies": {},
   "devDependencies": {
