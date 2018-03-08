@@ -30,7 +30,7 @@ function moveDots(dt) {
   for (const dot of dots) {
     dot.y += dotSpeed * dot.z * dt
     if (dot.y > canvas.height + 10) {
-      dot.y = -10
+      dot.y -= canvas.height + 20
     }
   }
 }
