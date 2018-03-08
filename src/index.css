@@ -84,6 +84,11 @@ section {
   text-decoration: underline;
 }
 
+.links li {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+
 @media (max-width: 750px) {
   .website-content {
     padding-left: 20px;
