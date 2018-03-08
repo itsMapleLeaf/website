@@ -20,10 +20,12 @@ const things = [
   "help people on Stack Overflow",
 ]
 
-let currentThing = 0
+let currentThing = 1
 
 const thingDisplay = document.getElementById("things")
 thingDisplay.style.transition = "300ms"
+thingDisplay.style.height = "30pt"
+thingDisplay.textContent = things[0]
 
 function displayNewThing() {
   thingDisplay.style.opacity = 0
