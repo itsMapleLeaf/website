@@ -33,6 +33,8 @@ export function calculateDotOffset(dt) {
 }
 
 export function updateDots(dt) {
+  if (dt > 0.5) return
+
   for (const dot of dots) {
     dot.y += dotSpeed * dot.z * dt
 
