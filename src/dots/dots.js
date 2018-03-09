@@ -60,7 +60,7 @@ export function drawDots(context) {
       1,
     )
 
-    const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.5
+    const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.8
 
     context.fillStyle = `hsla(224, 73%, 97%, ${opacity})`
     context.beginPath()
