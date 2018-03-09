@@ -1,5 +1,5 @@
 // @ts-check
-import { randomRange, lerp } from "./math"
+import { randomRange, lerp, distance, clamp } from "./math"
 import { canvas } from "./canvas"
 import { mouse } from "./mouse"
 import { orientation } from "./device-orientation"
@@ -47,7 +47,9 @@ export function updateDots(dt) {
 
 export function drawDots(context) {
   for (const dot of dots) {
-    context.fillStyle = `hsla(224, 73%, 97%, ${dot.opacity * dot.z * 0.2})`
+    const distanceOpacityBonus = clamp((1000 - distance(dot, mouse)) / 1000, 0.2, 1)
+
+    context.fillStyle = `hsla(224, 73%, 97%, ${dot.opacity * dot.z * distanceOpacityBonus * 0.5})`
     context.beginPath()
     context.arc(
       dot.x + dotOffset.x * dot.z,

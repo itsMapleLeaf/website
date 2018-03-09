@@ -11,3 +11,7 @@ export function lerp(a, b, delta) {
 export function randomRange(min, max) {
   return lerp(min, max, Math.random())
 }
+
+export function distance(point, other) {
+  return ((other.x - point.x) ** 2 + (other.y - point.y) ** 2) ** 0.5
+}
