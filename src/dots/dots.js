@@ -9,9 +9,12 @@ const dotSize = 8
 const dotSpeed = 100
 const dotOffset = { x: 0, y: 0 }
 const playfieldPadding = 200
+const cursorLightRadius = 800
 
 export function generateDots() {
-  for (let i = 0; i < 100; i++) {
+  const dotCount = Math.max(window.innerWidth, window.innerHeight) * 0.1
+
+  for (let i = 0; i < dotCount; i++) {
     const x = randomRange(-playfieldPadding, canvas.width + playfieldPadding)
     const y = randomRange(-playfieldPadding, canvas.height + playfieldPadding)
     const z = randomRange(0.2, 1)
@@ -47,9 +50,13 @@ export function updateDots(dt) {
 
 export function drawDots(context) {
   for (const dot of dots) {
-    const distanceOpacityBonus = clamp((1000 - distance(dot, mouse)) / 1000, 0.2, 1)
+    const cursorLightBonus = clamp(
+      (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius,
+      0.2,
+      1,
+    )
 
-    context.fillStyle = `hsla(224, 73%, 97%, ${dot.opacity * dot.z * distanceOpacityBonus * 0.5})`
+    context.fillStyle = `hsla(224, 73%, 97%, ${dot.opacity * dot.z * cursorLightBonus * 0.5})`
     context.beginPath()
     context.arc(
       dot.x + dotOffset.x * dot.z,
