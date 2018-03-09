@@ -51,6 +51,8 @@ export function updateDots(dt) {
 }
 
 export function drawDots(context) {
+  const flicker = lerp(0.7, 1, Math.random())
+
   for (const dot of dots) {
     const cursorLightBonus = clamp(
       (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius,
@@ -58,7 +60,9 @@ export function drawDots(context) {
       1,
     )
 
-    context.fillStyle = `hsla(224, 73%, 97%, ${dot.opacity * dot.z * cursorLightBonus * 0.5})`
+    const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.5
+
+    context.fillStyle = `hsla(224, 73%, 97%, ${opacity})`
     context.beginPath()
     context.arc(
       dot.x + dotOffset.x * dot.z,
