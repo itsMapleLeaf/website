@@ -54,11 +54,10 @@ export function drawDots(context) {
   const flicker = lerp(0.7, 1, Math.random())
 
   for (const dot of dots) {
-    const cursorLightBonus = clamp(
-      (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius,
-      0.2,
-      1,
-    )
+    const cursorLightBonus =
+      orientation == null
+        ? clamp((cursorLightRadius - distance(dot, mouse)) / cursorLightRadius, 0.2, 1)
+        : 0.3
 
     const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.8
 
