@@ -11,8 +11,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "copy": "^0.3.1",
-    "parcel-bundler": "^1.6.2",
+    "copy": "^0.3.2",
+    "parcel-bundler": "^1.9.7",
     "surge": "^0.20.1"
   }
 }
