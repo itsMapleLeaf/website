@@ -1,6 +1,6 @@
-import { shuffle, queryDom } from "./helpers"
+import { queryDom, shuffle } from "./helpers"
 
-const things = [
+const things = shuffle([
   "write JavaScript",
   "write TypeScript",
   "write CSS",
@@ -20,7 +20,7 @@ const things = [
   "watch anime",
   "help people on Discord",
   "help people on Stack Overflow",
-]
+])
 
 let currentThing = 1
 
@@ -44,5 +44,4 @@ function displayNewThing() {
   setTimeout(displayNewThing, 3500)
 }
 
-shuffle(things)
 displayNewThing()

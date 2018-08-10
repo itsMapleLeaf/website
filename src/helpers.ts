@@ -1,12 +1,14 @@
 // https://stackoverflow.com/a/6274381/1332403
-export function shuffle(array: any[]) {
+export function shuffle<T>(array: T[]): T[] {
+  const result = [...array]
   let j, x, i
-  for (i = array.length - 1; i > 0; i--) {
+  for (i = result.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1))
-    x = array[i]
-    array[i] = array[j]
-    array[j] = x
+    x = result[i]
+    result[i] = result[j]
+    result[j] = x
   }
+  return result
 }
 
 export function queryDom(selector: string) {
