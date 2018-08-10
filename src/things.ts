@@ -1,4 +1,4 @@
-import { shuffle } from "./helpers"
+import { shuffle, queryDom } from "./helpers"
 
 const things = [
   "write JavaScript",
@@ -24,17 +24,18 @@ const things = [
 
 let currentThing = 1
 
-const thingDisplay = document.getElementById("things")
+const thingDisplay = queryDom('#things') as HTMLElement
+
 thingDisplay.style.transition = "300ms"
 thingDisplay.textContent = things[0]
 
 function displayNewThing() {
-  thingDisplay.style.opacity = 0
+  thingDisplay.style.opacity = "0"
   thingDisplay.style.transform = "translateY(10px)"
 
   setTimeout(() => {
     thingDisplay.textContent = things[currentThing]
-    thingDisplay.style.opacity = 1
+    thingDisplay.style.opacity = "1"
     thingDisplay.style.transform = "translateY(0px)"
 
     currentThing = (currentThing + 1) % things.length

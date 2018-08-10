@@ -1,13 +1,13 @@
-import { updateDots, calculateDotOffset, drawDots } from "./dots"
 import { canvas } from "./canvas"
+import { calculateDotOffset, drawDots, updateDots } from "./dots"
 
-function update(dt) {
+function update(dt: number) {
   updateDots(dt)
   calculateDotOffset(dt)
 }
 
 function draw() {
-  const context = canvas.getContext("2d")
+  const context = canvas.getContext("2d")!
   context.clearRect(0, 0, context.canvas.width, context.canvas.height)
 
   drawDots(context)
@@ -18,8 +18,8 @@ function draw() {
   // }
 }
 
-let lastTime
-export function runDots(frameTime) {
+let lastTime: number | void
+export function runDots(frameTime: number) {
   const delta = frameTime - (lastTime || frameTime)
   lastTime = frameTime
 

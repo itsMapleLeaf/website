@@ -1,4 +1,6 @@
-export const canvas = document.querySelector("canvas")
+import { queryDom } from "../helpers"
+
+export const canvas = queryDom("canvas") as HTMLCanvasElement
 canvas.style.width = "100vw"
 canvas.style.height = "100vh"
 canvas.style.position = "absolute"

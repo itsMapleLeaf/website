@@ -1,10 +1,16 @@
-// @ts-check
-import { randomRange, lerp, distance, clamp } from "./math"
 import { canvas } from "./canvas"
-import { mouse } from "./mouse"
 import { orientation } from "./device-orientation"
+import { clamp, distance, lerp, randomRange } from "./math"
+import { mouse } from "./mouse"
 
-const dots = []
+type Dot = {
+  x: number
+  y: number
+  z: number
+  opacity: number
+}
+
+const dots = [] as Dot[]
 const dotSize = 8
 const dotSpeed = 100
 const dotOffset = { x: 0, y: 0 }
@@ -22,17 +28,25 @@ export function generateDots() {
   }
 }
 
-export function calculateDotOffset(dt) {
+export function calculateDotOffset(dt: number) {
   if (orientation) {
     dotOffset.x = lerp(dotOffset.x, orientation.x * 10, dt * 5)
     dotOffset.y = lerp(dotOffset.y, orientation.y * 10, dt * 5)
   } else {
-    dotOffset.x = lerp(dotOffset.x, (mouse.x - canvas.width / 2) / canvas.width * 50, dt * 5)
-    dotOffset.y = lerp(dotOffset.y, (mouse.y - canvas.height / 2) / canvas.height * 50, dt * 5)
+    dotOffset.x = lerp(
+      dotOffset.x,
+      ((mouse.x - canvas.width / 2) / canvas.width) * 50,
+      dt * 5,
+    )
+    dotOffset.y = lerp(
+      dotOffset.y,
+      ((mouse.y - canvas.height / 2) / canvas.height) * 50,
+      dt * 5,
+    )
   }
 }
 
-export function updateDots(dt) {
+export function updateDots(dt: number) {
   if (dt > 0.5) return
 
   for (const dot of dots) {
@@ -50,13 +64,17 @@ export function updateDots(dt) {
   }
 }
 
-export function drawDots(context) {
+export function drawDots(context: CanvasRenderingContext2D) {
   const flicker = lerp(0.7, 1, Math.random())
 
   for (const dot of dots) {
     const cursorLightBonus =
       orientation == null
-        ? clamp((cursorLightRadius - distance(dot, mouse)) / cursorLightRadius, 0.2, 1)
+        ? clamp(
+            (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius,
+            0.2,
+            1,
+          )
         : 0.3
 
     const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.8
