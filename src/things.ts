@@ -24,7 +24,7 @@ const things = [
 
 let currentThing = 1
 
-const thingDisplay = queryDom('#things') as HTMLElement
+const thingDisplay = queryDom("#things") as HTMLElement
 
 thingDisplay.style.transition = "300ms"
 thingDisplay.textContent = things[0]
