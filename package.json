@@ -5,7 +5,7 @@
   "author": "kingdaro",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html",
+    "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url . && copy-cli public/**/* dist",
     "deploy": "npm run build && surge dist"
   },
