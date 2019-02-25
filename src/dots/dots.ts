@@ -67,6 +67,11 @@ export function updateDots(dt: number) {
 export function drawDots(context: CanvasRenderingContext2D) {
   const flicker = lerp(0.7, 1, Math.random())
 
+  context.save()
+
+  context.shadowBlur = 6
+  context.shadowColor = `rgba(255, 255, 255, 0.5)`
+
   for (const dot of dots) {
     const cursorLightBonus =
       orientation == null
@@ -80,7 +85,9 @@ export function drawDots(context: CanvasRenderingContext2D) {
     const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.8
 
     context.fillStyle = `hsla(224, 73%, 97%, ${opacity})`
+
     context.beginPath()
+
     context.arc(
       dot.x + dotOffset.x * dot.z,
       dot.y + dotOffset.y * dot.z,
@@ -88,8 +95,11 @@ export function drawDots(context: CanvasRenderingContext2D) {
       0,
       Math.PI * 2,
     )
+
     context.fill()
   }
+
+  context.restore()
 }
 
 generateDots()
