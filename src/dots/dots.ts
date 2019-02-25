@@ -73,14 +73,11 @@ export function drawDots(context: CanvasRenderingContext2D) {
   context.shadowColor = `rgba(255, 255, 255, 0.5)`
 
   for (const dot of dots) {
+    const rawCursorLightBonus =
+      (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius
+
     const cursorLightBonus =
-      orientation == null
-        ? clamp(
-            (cursorLightRadius - distance(dot, mouse)) / cursorLightRadius,
-            0.2,
-            1,
-          )
-        : 0.3
+      orientation == null ? clamp(rawCursorLightBonus, 0.2, 1) : 0.3
 
     const opacity = dot.opacity * dot.z * cursorLightBonus * flicker * 0.8
 
