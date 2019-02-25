@@ -1,4 +1,4 @@
-import { queryDom, shuffle } from "./helpers";
+import { queryDom, shuffle } from "./helpers"
 
 const things = shuffle([
   "writing JavaScript",
