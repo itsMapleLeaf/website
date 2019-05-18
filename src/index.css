@@ -107,3 +107,8 @@ section {
     font-size: 12pt;
   }
 }
+
+::selection {
+  background-color: hsl(218, 42%, 9%);
+  opacity: 0.5;
+}
