@@ -27,7 +27,7 @@ section {
 }
 
 .website-content {
-  padding: 100px;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -76,7 +76,7 @@ section {
 
 .links a {
   opacity: 0.75;
-  transition: 0.3s;
+  transition: 0.3s opacity;
 }
 
 .links a:hover {
@@ -86,7 +86,7 @@ section {
 
 .links li {
   list-style: none;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 750px) {
