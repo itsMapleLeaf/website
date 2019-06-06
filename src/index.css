@@ -86,7 +86,7 @@ section {
 
 .links li {
   list-style: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 @media (max-width: 750px) {
