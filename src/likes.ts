@@ -1,6 +1,6 @@
 import { queryDom, shuffle } from "./helpers"
 
-const things = shuffle([
+const likes = shuffle([
   "writing JavaScript",
   "writing TypeScript",
   "writing CSS",
@@ -22,26 +22,26 @@ const things = shuffle([
   "cute stuff",
 ])
 
-let currentThing = 1
+let currentLike = 1
 
-const thingDisplay = queryDom("#things") as HTMLElement
+const likesDisplay = queryDom("#likes") as HTMLElement
 
-thingDisplay.style.transition = "300ms"
-thingDisplay.textContent = things[0]
+likesDisplay.style.transition = "300ms"
+likesDisplay.textContent = likes[0]
 
-function displayNewThing() {
-  thingDisplay.style.opacity = "0"
-  thingDisplay.style.transform = "translateY(10px)"
+function displayNewLike() {
+  likesDisplay.style.opacity = "0"
+  likesDisplay.style.transform = "translateY(10px)"
 
   setTimeout(() => {
-    thingDisplay.textContent = things[currentThing]
-    thingDisplay.style.opacity = "1"
-    thingDisplay.style.transform = "translateY(0px)"
+    likesDisplay.textContent = likes[currentLike]
+    likesDisplay.style.opacity = "1"
+    likesDisplay.style.transform = "translateY(0px)"
 
-    currentThing = (currentThing + 1) % things.length
+    currentLike = (currentLike + 1) % likes.length
   }, 500)
 
-  setTimeout(displayNewThing, 3500)
+  setTimeout(displayNewLike, 3500)
 }
 
-displayNewThing()
+displayNewLike()
