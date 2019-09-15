@@ -1,4 +1,4 @@
-import { queryDom, shuffle } from "./helpers"
+import { queryDom, shuffle, sleep } from "./helpers"
 
 const likes = shuffle([
   "writing JavaScript",
@@ -22,26 +22,28 @@ const likes = shuffle([
   "cute stuff",
 ])
 
-let currentLike = 1
+async function transitionLikes() {
+  let currentLike = 1
 
-const likesDisplay = queryDom("#likes") as HTMLElement
+  const likesDisplay = queryDom("#likes") as HTMLElement
 
-likesDisplay.style.transition = "300ms"
-likesDisplay.textContent = likes[0]
+  likesDisplay.style.transition = "300ms"
+  likesDisplay.textContent = likes[0]
 
-function displayNewLike() {
-  likesDisplay.style.opacity = "0"
-  likesDisplay.style.transform = "translateY(10px)"
+  while (true) {
+    likesDisplay.style.opacity = "0"
+    likesDisplay.style.transform = "translateY(10px)"
 
-  setTimeout(() => {
+    await sleep(500)
+
     likesDisplay.textContent = likes[currentLike]
     likesDisplay.style.opacity = "1"
     likesDisplay.style.transform = "translateY(0px)"
 
     currentLike = (currentLike + 1) % likes.length
-  }, 500)
 
-  setTimeout(displayNewLike, 3500)
+    await sleep(3000)
+  }
 }
 
-displayNewLike()
+transitionLikes().catch(console.error)
