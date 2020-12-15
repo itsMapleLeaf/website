@@ -5,9 +5,7 @@
     "build": "snowpack build",
     "format": "prettier --write \"src/**/*.{ts,css}\""
   },
-  "dependencies": {
-    "webfontloader": "^1.6.28"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@snowpack/plugin-build-script": "^2.0.12",
     "@types/webfontloader": "^1.6.32",
