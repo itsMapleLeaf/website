@@ -6,8 +6,9 @@ const likes = shuffle([
   "writing CSS",
   "writing HTML",
   "working on web apps",
-  "CSS-in-JS (don't @ me)",
   "using React",
+  "using Next.js",
+  "using TailwindCSS",
   "learning new things",
   "getting stuff done",
   "making games",
@@ -20,6 +21,7 @@ const likes = shuffle([
   "helping people on Discord",
   "helping people on Stack Overflow",
   "cute stuff",
+  "accessibility",
 ])
 
 async function transitionLikes() {
