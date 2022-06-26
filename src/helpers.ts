@@ -31,3 +31,11 @@ export function loadImage(src: string) {
     image.onerror = () => reject(new Error("Failed to load image"))
   })
 }
+
+export function toError(error: unknown) {
+  return error instanceof Error ? error : new Error(String(error))
+}
+
+export function raise(error: unknown): never {
+  throw toError(error)
+}

@@ -1,4 +1,5 @@
 ---
+import { Dots } from '../dots';
 import ExternalLink from '../external-link.astro';
 import { Likes } from '../likes';
 import '../tailwind.css';
@@ -21,7 +22,7 @@ import '../tailwind.css';
 </head>
 
 <body class="px-16 py-16 space-y-8 text-center sm:text-left">
-	<canvas class="absolute inset-0 w-screen h-screen opacity-75 pointer-events-none"></canvas>
+	<Dots client:idle />
 
 	<main class="flex flex-col items-center space-y-8 sm:items-start">
 		<h1 class="text-6xl font-condensed mb-1">
@@ -81,7 +82,3 @@ import '../tailwind.css';
 </body>
 
 </html>
-
-<script>
-	import "../dots/main.ts"
-</script>
