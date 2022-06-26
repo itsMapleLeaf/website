@@ -26,18 +26,18 @@ const likes = shuffle([
 ])
 
 export function Likes() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
     void (async () => {
       while (true) {
-        setVisible(true)
         await sleep(3000)
         setVisible(false)
         await sleep(500)
         setIndex((index) => index + 1)
         await sleep(500)
+        setVisible(true)
       }
     })()
   }, [])
