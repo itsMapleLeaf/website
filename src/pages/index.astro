@@ -1,4 +1,5 @@
 ---
+import { Likes } from '../likes';
 import '../tailwind.css';
 ---
 
@@ -22,15 +23,11 @@ import '../tailwind.css';
 	<canvas class="absolute inset-0 w-screen h-screen opacity-75 pointer-events-none"></canvas>
 
 	<main class="flex flex-col items-center space-y-8 sm:items-start">
-		<h1 class="text-6xl font-condensed">
-			<span class="text-5xl opacity-60">hi, i'm</span>
-			MapleLeaf
+		<h1 class="text-6xl font-condensed mb-1">
+			<span class="text-5xl opacity-60">hi, i'm</span> <span>MapleLeaf</span>
 		</h1>
 
-		<h2 class="grid gap-1 text-2xl font-condensed sm:grid-flow-col auto-cols-max">
-			<span class="opacity-50">i like</span>
-			<span id="likes" class="inline-block"></span>
-		</h2>
+		<Likes client:idle />
 
 		<section class="flex space-x-3">
 			<a class="transition-colors hover:text-orange-300" href="https://twitter.com/heyImMapleLeaf" title="Twitter"
@@ -84,9 +81,6 @@ import '../tailwind.css';
 
 </html>
 
-<script>
-	import "../likes.ts"
-</script>
 <script>
 	import "../links.ts"
 </script>
