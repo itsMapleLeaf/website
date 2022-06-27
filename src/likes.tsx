@@ -30,8 +30,10 @@ export function Likes() {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
+    let running = true
+
     void (async () => {
-      while (true) {
+      while (running) {
         await sleep(3000)
         setVisible(false)
         await sleep(500)
@@ -40,6 +42,10 @@ export function Likes() {
         setVisible(true)
       }
     })()
+
+    return () => {
+      running = false
+    }
   }, [])
 
   return (

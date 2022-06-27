@@ -1,2 +1,5 @@
-package.json
-tsconfig.json
+node_modules
+build
+dist
+.cache
+pnpm-lock.yaml

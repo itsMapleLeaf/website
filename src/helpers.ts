@@ -5,7 +5,9 @@ export function shuffle<T>(array: T[]): T[] {
   for (i = result.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1))
     x = result[i]
+    // @ts-expect-error
     result[i] = result[j]
+    // @ts-expect-error
     result[j] = x
   }
   return result
@@ -27,8 +29,10 @@ export function loadImage(src: string) {
   return new Promise<HTMLImageElement>((resolve, reject) => {
     const image = new Image()
     image.src = src
-    image.onload = () => resolve(image)
-    image.onerror = () => reject(new Error("Failed to load image"))
+    image.addEventListener("load", () => resolve(image))
+    image.addEventListener("error", () =>
+      reject(new Error("Failed to load image")),
+    )
   })
 }
 

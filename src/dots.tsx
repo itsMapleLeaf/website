@@ -156,7 +156,7 @@ class DotsRenderer {
         (cursorLightRadius - distance(dot, this.mouse)) / cursorLightRadius
 
       const cursorLightBonus =
-        this.orientation == null ? clamp(rawCursorLightBonus, 0.2, 1) : 0.3
+        this.orientation == undefined ? clamp(rawCursorLightBonus, 0.2, 1) : 0.3
 
       const opacity = dot.opacity * dot.z * cursorLightBonus * 0.8
 
