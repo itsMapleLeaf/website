@@ -18,8 +18,10 @@ import leaf from '../white-leaf.png';
 	<link rel="icon" href="/favicon.png" />
 	<title>MapleLeaf</title>
 
-	<script async defer data-website-id="c0a3cab7-5879-42c3-92c6-57b8ba99f130" src="https://umami-production-72bc.up.railway.app/umami.js">
-	</script>
+	{import.meta.env.PROD &&
+	<script type="module" async defer data-website-id="c0a3cab7-5879-42c3-92c6-57b8ba99f130" crossorigin="anonymous">
+		import "https://umami-production-72bc.up.railway.app/umami.js"
+	</script>}
 </head>
 
 <body class="px-4 py-16 space-y-8 text-center sm:text-left sm:px-16 sm:py-12">
