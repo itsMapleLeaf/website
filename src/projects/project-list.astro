@@ -1,0 +1,47 @@
+---
+import ExternalLink from "../external-link.astro";
+import { linkStyle } from "../ui/styles";
+
+const importDefault = (module: string) => import(module).then(m => m.default);
+
+const projects = [
+  {
+    name: 'anigreen',
+    description: 'track watched anime on a weekday basis',
+    url: 'https://anigreen.mapleleaf.dev',
+    source: 'https://github.com/itsMapleLeaf/anigreen',
+    image: importDefault('./anigreen.png'),
+  },
+  {
+    name: 'fontme',
+    description: 'easily self-host google fonts',
+    url: 'https://fontme.mapleleaf.dev',
+    source: 'https://github.com/itsMapleLeaf/fontme',
+    image: importDefault('./fontme.png'),
+  },
+  {
+    name: 'reacord',
+    description: 'render discord messages with react',
+    url: 'https://reacord.mapleleaf.dev',
+    source: 'https://github.com/itsMapleLeaf/reacord',
+    image: importDefault('./reacord.png'),
+  },
+].sort((a, b) => a.name.localeCompare(b.name))
+---
+
+<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+  {await Promise.all(projects.map(async (project) => (
+  <article class="grid gap-3 p-4 rounded-md shadow-lg bg-black/50 overflow-clip">
+    <h3 class="text-3xl font-light font-condensed">{project.name}</h3>
+    <div class="-mx-2">
+      <img src={await project.image} alt={project.name} class="aspect-video" />
+    </div>
+    <p>{project.description}</p>
+    <p>
+      <ExternalLink class={linkStyle} href={project.url}>website</ExternalLink> <span aria-hidden
+        class="inline-block px-[2px] translate-y-px">&bullet;</span>
+      <ExternalLink class={linkStyle} href={project.source}>source</ExternalLink>
+    </p>
+  </article>
+  )))}
+</div>

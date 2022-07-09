@@ -60,7 +60,7 @@ export function Dots() {
 
   return (
     <canvas
-      class="absolute inset-0 w-screen h-screen opacity-75 pointer-events-none"
+      class="fixed inset-0 w-screen h-screen opacity-75 pointer-events-none"
       ref={canvasRef}
     />
   )

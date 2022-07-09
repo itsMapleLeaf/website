@@ -28,5 +28,8 @@
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4"
   },
-  "prettier": "@itsmapleleaf/configs/prettier"
+  "prettier": "@itsmapleleaf/configs/prettier",
+  "dependencies": {
+    "clsx": "^1.2.1"
+  }
 }

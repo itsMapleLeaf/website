@@ -6,4 +6,12 @@
   ::selection {
     @apply bg-black bg-opacity-50;
   }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    @apply ring-2 ring-orange-300;
+  }
 }
