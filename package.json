@@ -10,7 +10,7 @@
     "preview": "astro preview",
     "lint": "eslint --ext js,ts,tsx .",
     "lint-fix": "pnpm lint -- --fix",
-    "format": "prettier --write .",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,astro,ts,tsx,css,md,json}\"",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -25,10 +25,10 @@
     "postcss": "^8.4.14",
     "preact": "^10.6.5",
     "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.1",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4"
   },
-  "prettier": "@itsmapleleaf/configs/prettier",
   "dependencies": {
     "clsx": "^1.2.1"
   }
