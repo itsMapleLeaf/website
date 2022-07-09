@@ -2,29 +2,27 @@
 import ExternalLink from "../external-link.astro";
 import { linkStyle } from "../ui/styles";
 
-const importDefault = (module: string) => import(module).then(m => m.default);
-
 const projects = [
   {
     name: 'anigreen',
     description: 'track watched anime on a weekday basis',
     url: 'https://anigreen.mapleleaf.dev',
     source: 'https://github.com/itsMapleLeaf/anigreen',
-    image: importDefault('./anigreen.png'),
+    image: import('./anigreen.png').then((m) => m.default),
   },
   {
     name: 'fontme',
     description: 'easily self-host google fonts',
     url: 'https://fontme.mapleleaf.dev',
     source: 'https://github.com/itsMapleLeaf/fontme',
-    image: importDefault('./fontme.png'),
+    image: import('./fontme.png').then((m) => m.default),
   },
   {
     name: 'reacord',
     description: 'render discord messages with react',
     url: 'https://reacord.mapleleaf.dev',
     source: 'https://github.com/itsMapleLeaf/reacord',
-    image: importDefault('./reacord.png'),
+    image: import('./reacord.png').then((m) => m.default),
   },
 ].sort((a, b) => a.name.localeCompare(b.name))
 ---
