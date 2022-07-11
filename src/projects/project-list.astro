@@ -32,11 +32,11 @@ const projects = [
     projects.map(async (project) => (
       <article class="grid gap-3 p-4 rounded-md shadow-lg bg-black/50 overflow-clip">
         <h3 class="text-3xl font-light font-condensed">{project.name}</h3>
-        <div class="-mx-2">
+        <div class="-mx-4">
           <img
             src={await project.image}
             alt={project.name}
-            class="aspect-video"
+            class="aspect-[18/9] object-cover"
           />
         </div>
         <p>{project.description}</p>
