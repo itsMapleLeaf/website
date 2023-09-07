@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/fira-sans':
+    specifier: ^5.0.11
+    version: 5.0.11
+  '@fontsource/fira-sans-condensed':
+    specifier: ^5.0.8
+    version: 5.0.8
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -904,6 +910,14 @@ packages:
     resolution: {integrity: sha512-ZSjtmelB7IJfWD2Fvb7+Z+ChTIKWq6kjda95fLcQKNS5aheVHn4IkfgRQE3sIIzTcSLwLcLZUD9UBt+V7+h+Pw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource/fira-sans-condensed@5.0.8:
+    resolution: {integrity: sha512-58qYS6/Dl6wmkTt4a20gR+U347CIPTx67rSy4F6XZem3OmkyZ8nb7qZc0S4WHFtAKK7ILp8vGi1ZGVEuzuuu3g==}
+    dev: false
+
+  /@fontsource/fira-sans@5.0.11:
+    resolution: {integrity: sha512-ozUqZgGSPnc9r7TLL+6VR4Pe0EzgD+MagzF8NJhqHU9y3g0+/QpO1/m55E8UxGo8yoAIHMFQH0EDORFvUI0jtQ==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.11:
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}

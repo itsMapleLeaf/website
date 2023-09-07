@@ -15,6 +15,8 @@
     "lint:prettier": "prettier . \"src/**/*.astro\" --cache --write"
   },
   "dependencies": {
+    "@fontsource/fira-sans": "^5.0.11",
+    "@fontsource/fira-sans-condensed": "^5.0.8",
     "clsx": "^2.0.0"
   },
   "devDependencies": {
