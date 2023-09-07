@@ -10,16 +10,15 @@
     "preview": "astro preview",
     "lint": "run-s --continue-on-error lint:*",
     "lint:types": "tsc -b",
-    "lint:eslint": "eslint . --cache",
-    "lint:prettier": "prettier . \"src/**/*.astro\" --cache --check",
-    "format": "run-s --continue-on-error format:*",
-    "format:eslint": "eslint . --fix --cache",
-    "format:prettier": "prettier . \"src/**/*.astro\" --cache --write --list-different"
+    "lint:astro": "astro check",
+    "lint:eslint": "eslint . --cache --fix",
+    "lint:prettier": "prettier . \"src/**/*.astro\" --cache --write"
   },
   "dependencies": {
     "clsx": "^2.0.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.2.0",
     "@astrojs/preact": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@itsmapleleaf/configs": "file:..\\configs",
