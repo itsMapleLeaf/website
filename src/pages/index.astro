@@ -9,34 +9,38 @@ import { linkStyle } from "../ui/styles"
 import leaf from "../white-leaf.png"
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="text-orange-100 bg-orange-900">
+<!doctype html>
+<html lang="en" class="bg-orange-900 text-orange-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="a website for a nerd who does web coding"
+    <meta
+      name="description"
+      content="a website for a nerd who does web coding"
     />
     <link rel="icon" href="/favicon.png" />
     <title>MapleLeaf</title>
 
-    {import.meta.env.PROD && (
-      <script
-        defer
-        data-website-id="c0a3cab7-5879-42c3-92c6-57b8ba99f130"
-        src="https://umami-production-72bc.up.railway.app/umami.js"
-      />
-    )}
+    {
+      import.meta.env.PROD && (
+        <script
+          defer
+          data-website-id="c0a3cab7-5879-42c3-92c6-57b8ba99f130"
+          src="https://umami-production-72bc.up.railway.app/umami.js"
+        />
+      )
+    }
   </head>
 
   <body
-    class="grid gap-12 px-4 py-16 text-center sm:text-left sm:px-16 sm:py-12"
+    class="grid gap-12 px-4 py-16 text-center sm:px-16 sm:py-12 sm:text-left"
   >
     <main class="flex flex-col items-center space-y-8 sm:items-start">
-      <h1 class="mb-1 text-6xl font-condensed">
+      <h1 class="mb-1 font-condensed text-6xl">
         <span class="text-5xl opacity-60">hi, i'm</span> MapleLeaf <img
           src={leaf}
           alt=""
-          class="inline-block h-[1em] align-text-top relative top-px opacity-50"
+          class="relative top-px inline-block h-[1em] align-text-top opacity-50"
         />
       </h1>
       <Likes client:idle />

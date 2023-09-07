@@ -33,6 +33,7 @@ export function Likes() {
     let running = true
 
     void (async () => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       while (running) {
         await sleep(3000)
         setVisible(false)
@@ -49,11 +50,11 @@ export function Likes() {
   }, [])
 
   return (
-    <p class="grid gap-1 text-2xl font-condensed sm:grid-flow-col auto-cols-max">
+    <p class="grid auto-cols-max gap-1 font-condensed text-2xl sm:grid-flow-col">
       <span class="opacity-50">i like</span>{" "}
       <span
         class={`inline-block transition ${
-          visible ? "ease-out opacity-100" : "ease-in translate-y-2 opacity-0"
+          visible ? "opacity-100 ease-out" : "translate-y-2 opacity-0 ease-in"
         }`}
       >
         {likes[index % likes.length]}

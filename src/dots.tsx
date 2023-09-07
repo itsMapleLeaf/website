@@ -33,6 +33,7 @@ export function Dots() {
       ))
 
       let currentTime = await animationFrame()
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       while (running) {
         const nextTime = await animationFrame()
         const delta = (nextTime - currentTime) / 1000
@@ -60,7 +61,7 @@ export function Dots() {
 
   return (
     <canvas
-      class="fixed inset-0 w-screen h-screen opacity-75 pointer-events-none"
+      class="pointer-events-none fixed inset-0 h-screen w-screen opacity-75"
       ref={canvasRef}
     />
   )

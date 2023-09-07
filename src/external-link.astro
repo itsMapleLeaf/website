@@ -1,3 +1,8 @@
-<a target="_blank" rel="noopener" {...Astro.props}>
-  <slot></slot>
+---
+import type { HTMLAttributes } from "astro/types"
+interface Props extends HTMLAttributes<"a"> {}
+---
+
+<a target="_blank" {...Astro.props}>
+  <slot />
 </a>

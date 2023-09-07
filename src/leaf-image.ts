@@ -10,7 +10,10 @@ export async function createLeafImage(size: number) {
   const image = document.createElement("canvas")
   image.width = image.height = size
 
-  const context = image.getContext("2d")!
+  const context = image.getContext("2d")
+  if (!context) {
+    throw new Error("Could not create context")
+  }
 
   context.drawImage(sourceImage, 0, 0, image.width, image.height)
 
