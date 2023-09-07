@@ -1,6 +1,7 @@
 ---
 import ExternalLink from "../external-link.astro"
 import { linkStyle } from "../ui/styles"
+import { Image } from "astro:assets"
 
 const projects = [
   {
@@ -10,13 +11,6 @@ const projects = [
     source: "https://github.com/itsMapleLeaf/anigreen",
     image: import("./anigreen.png").then((m) => m.default),
   },
-  // {
-  //   name: "fontme",
-  //   description: "easily self-host google fonts",
-  //   url: "https://fontme.mapleleaf.dev",
-  //   source: "https://github.com/itsMapleLeaf/fontme",
-  //   image: import("./fontme.png").then((m) => m.default),
-  // },
   {
     name: "reacord",
     description: "render discord messages with react",
@@ -34,9 +28,9 @@ const projects = [
         <article class="grid gap-3 overflow-clip rounded-md bg-black/50 p-4 shadow-lg">
           <h3 class="font-condensed text-3xl font-light">{project.name}</h3>
           <div class="-mx-4">
-            <img
+            <Image
               src={await project.image}
-              alt={project.name}
+              alt={`a screenshot of ${project.name}`}
               class="aspect-[18/9] object-cover"
             />
           </div>

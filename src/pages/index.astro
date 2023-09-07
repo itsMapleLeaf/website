@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import { Dots } from "../dots"
 import ExternalLink from "../external-link.astro"
 import "../fonts.css"
@@ -37,10 +38,11 @@ import leaf from "../white-leaf.png"
   >
     <main class="flex flex-col items-center space-y-8 sm:items-start">
       <h1 class="mb-1 font-condensed text-6xl">
-        <span class="text-5xl opacity-60">hi, i'm</span> MapleLeaf <img
+        <span class="text-5xl opacity-60">hi, i'm</span> MapleLeaf
+        <Image
           src={leaf}
           alt=""
-          class="relative top-px inline-block h-[1em] align-text-top opacity-50"
+          class="relative top-px inline-block h-[1em] w-[1em] align-text-top opacity-50"
         />
       </h1>
       <Likes client:idle />
