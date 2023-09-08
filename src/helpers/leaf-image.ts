@@ -1,4 +1,4 @@
-import { loadImage } from "./helpers"
+import { loadImage } from "./common.ts"
 
 export async function createLeafImage(size: number) {
   const sourceImage = await loadImage(

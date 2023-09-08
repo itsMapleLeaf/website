@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks"
-import { shuffle, sleep } from "./helpers"
+import { shuffle, sleep } from "../helpers/common.ts"
 
 const likes = shuffle([
   "writing JavaScript",

@@ -1,6 +1,6 @@
 ---
-import ExternalLink from "../external-link.astro"
-import { linkStyle } from "../ui/styles"
+import ExternalLink from "./external-link.astro"
+import { linkStyle } from "../styles/common"
 import { Image } from "astro:assets"
 
 const projects = [
@@ -9,14 +9,14 @@ const projects = [
     description: "track watched anime on a weekday basis",
     url: "https://anigreen.mapleleaf.dev",
     source: "https://github.com/itsMapleLeaf/anigreen",
-    image: import("./anigreen.png").then((m) => m.default),
+    image: import("../assets/anigreen.png").then((m) => m.default),
   },
   {
     name: "reacord",
     description: "render discord messages with react",
     url: "https://reacord.mapleleaf.dev",
     source: "https://github.com/itsMapleLeaf/reacord",
-    image: import("./reacord.png").then((m) => m.default),
+    image: import("../assets/reacord.png").then((m) => m.default),
   },
 ].sort((a, b) => a.name.localeCompare(b.name))
 ---

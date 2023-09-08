@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "preact/hooks"
-import { raise } from "./helpers"
-import { createLeafImage } from "./leaf-image"
-import { clamp, distance, lerp, randomRange } from "./math"
-import { useWindowEvent } from "./use-window-event"
+import { raise } from "../helpers/common.ts"
+import { createLeafImage } from "../helpers/leaf-image.ts"
+import { clamp, distance, lerp, randomRange } from "../helpers/math.ts"
+import { useWindowEvent } from "../helpers/use-window-event.ts"
 
 export function Dots() {
   const canvasRef = useRef<HTMLCanvasElement>(null)

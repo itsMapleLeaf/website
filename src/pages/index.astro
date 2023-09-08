@@ -1,15 +1,13 @@
 ---
-import "@fontsource/fira-sans/latin-400.css"
 import "@fontsource/fira-sans-condensed/latin-300.css"
-import "../tailwind.css"
-
+import "@fontsource/fira-sans/latin-400.css"
 import { Image } from "astro:assets"
-import { Dots } from "../dots"
-import ExternalLink from "../external-link.astro"
-import { Likes } from "../likes"
-import ProjectList from "../projects/project-list.astro"
-import { linkStyle } from "../ui/styles"
-import leaf from "../white-leaf.png"
+import { Dots } from "../components/dots.tsx"
+import ExternalLink from "../components/external-link.astro"
+import { Likes } from "../components/likes.tsx"
+import ProjectList from "../components/project-list.astro"
+import { linkStyle } from "../styles/common.ts"
+import leaf from "../assets/white-leaf.png"
 ---
 
 <!doctype html>
@@ -23,16 +21,19 @@ import leaf from "../white-leaf.png"
     />
     <link rel="icon" href="/favicon.png" />
     <title>MapleLeaf</title>
+    <style>
+      ::selection {
+        @apply bg-black bg-opacity-50;
+      }
 
-    {
-      import.meta.env.PROD && (
-        <script
-          defer
-          data-website-id="c0a3cab7-5879-42c3-92c6-57b8ba99f130"
-          src="https://umami-production-72bc.up.railway.app/umami.js"
-        />
-      )
-    }
+      :focus {
+        outline: none;
+      }
+
+      :focus-visible {
+        @apply ring-2 ring-orange-300;
+      }
+    </style>
   </head>
 
   <body
