@@ -2,13 +2,18 @@ import { useEffect, useState } from "preact/hooks"
 import { shuffle, sleep } from "../helpers/common.ts"
 
 const likes = shuffle([
-  "writing JavaScript",
-  "writing TypeScript",
+  "working with the Astro team 💜",
+  "using TypeScript",
+  "using Convex",
+  "using Godot",
+  "using Gleam",
+  "using Rust (sometimes)",
+  "using Go",
+  "using Deno",
   "writing CSS",
   "writing HTML",
   "working on web apps",
   "using React",
-  "using Next.js",
   "using Remix",
   "using Astro",
   "using TailwindCSS",
@@ -17,11 +22,10 @@ const likes = shuffle([
   "producing music",
   "electronic music",
   "rhythm games",
-  "eating pizza",
+  "tasty fruit",
   "following cool stuff in OSS",
   "watching anime",
-  "helping people on Discord",
-  "cute stuff",
+  "cute things",
   "accessibility",
 ])
 
@@ -33,7 +37,6 @@ export function Likes() {
     let running = true
 
     void (async () => {
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       while (running) {
         await sleep(3000)
         setVisible(false)
