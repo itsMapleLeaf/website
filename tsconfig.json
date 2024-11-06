@@ -1,0 +1,8 @@
+{
+	"extends": "@total-typescript/tsconfig/bundler/dom.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "preact",
+		"allowImportingTsExtensions": true
+	}
+}
