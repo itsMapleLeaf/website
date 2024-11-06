@@ -30,8 +30,9 @@ export function loadImage(src: string) {
     const image = new Image()
     image.src = src
     image.addEventListener("load", () => resolve(image))
-    image.addEventListener("error", () =>
-      reject(new Error("Failed to load image")),
+    image.addEventListener(
+      "error",
+      () => reject(new Error("Failed to load image")),
     )
   })
 }

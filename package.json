@@ -9,8 +9,8 @@
     "lint": "run-s --continue-on-error lint:*",
     "lint:types": "tsc -b",
     "lint:astro": "astro check",
-    "lint:eslint": "eslint . --cache --fix",
-    "lint:prettier": "prettier . \"src/**/*.astro\" --cache --write"
+    "lint:eslint": "echo todo",
+    "lint:prettier": "prettier . --cache --write --list-different"
   },
   "dependencies": {
     "@fontsource/fira-sans": "^5.0.11",
@@ -18,27 +18,15 @@
     "clsx": "^2.0.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.2.0",
-    "@astrojs/preact": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "@itsmapleleaf/configs": "github:itsMapleLeaf/configs",
-    "astro": "^3.0.10",
-    "eslint": "^8.48.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "astro": "^4.16.10",
     "npm-run-all": "^4.1.5",
-    "preact": "^10.17.1",
-    "prettier": "^3.0.3",
-    "sharp": "^0.32.5",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "./node_modules/@itsmapleleaf/configs/eslint.config.cjs"
-    ],
-    "ignorePatterns": [
-      "node_modules",
-      "dist"
-    ]
-  },
-  "prettier": "@itsmapleleaf/configs/prettier"
+    "preact": "^10.24.3",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
 }

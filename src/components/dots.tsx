@@ -147,8 +147,8 @@ class DotsRenderer {
   }
 
   draw() {
-    const context =
-      this.canvas.getContext("2d") ?? raise("Canvas context not available")
+    const context = this.canvas.getContext("2d") ??
+      raise("Canvas context not available")
 
     context.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
@@ -156,8 +156,9 @@ class DotsRenderer {
       const rawCursorLightBonus =
         (cursorLightRadius - distance(dot, this.mouse)) / cursorLightRadius
 
-      const cursorLightBonus =
-        this.orientation == undefined ? clamp(rawCursorLightBonus, 0.2, 1) : 0.3
+      const cursorLightBonus = this.orientation == undefined
+        ? clamp(rawCursorLightBonus, 0.2, 1)
+        : 0.3
 
       const opacity = dot.opacity * dot.z * cursorLightBonus * 0.8
 

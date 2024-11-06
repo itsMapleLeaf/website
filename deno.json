@@ -1,0 +1,11 @@
+{
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "exclude": ["node_modules", "dist", ".astro"],
+  "fmt": {
+    "semiColons": false
+  }
+}
