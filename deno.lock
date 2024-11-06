@@ -14,10 +14,13 @@
     "npm:astro@4.16.10": "4.16.10_@babel+core@7.26.0_typescript@5.6.3_vite@5.4.10_zod@3.23.8",
     "npm:astro@^4.16.10": "4.16.10_@babel+core@7.26.0_typescript@5.6.3_vite@5.4.10_zod@3.23.8",
     "npm:clsx@2": "2.1.1",
+    "npm:npm-run-all@4.1.5": "4.1.5",
     "npm:npm-run-all@^4.1.5": "4.1.5",
     "npm:preact@^10.24.3": "10.24.3",
+    "npm:prettier-plugin-astro@~0.14.1": "0.14.1",
     "npm:prettier@^3.3.3": "3.3.3",
     "npm:sharp@~0.33.5": "0.33.5",
+    "npm:simple-icons-astro@^13.16.0": "13.16.0_astro@4.16.10__@babel+core@7.26.0__typescript@5.6.3__vite@5.4.10__zod@3.23.8_typescript@5.6.3_@types+node@22.5.4",
     "npm:tailwindcss@^3.4.14": "3.4.14_postcss@8.4.47",
     "npm:typescript@^5.6.3": "5.6.3"
   },
@@ -3095,6 +3098,14 @@
         "which-pm"
       ]
     },
+    "prettier-plugin-astro@0.14.1": {
+      "integrity": "sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==",
+      "dependencies": [
+        "@astrojs/compiler",
+        "prettier@3.3.3",
+        "sass-formatter"
+      ]
+    },
     "prettier@2.8.7": {
       "integrity": "sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw=="
     },
@@ -3333,6 +3344,9 @@
         "queue-microtask"
       ]
     },
+    "s.color@0.0.15": {
+      "integrity": "sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA=="
+    },
     "safe-array-concat@1.1.2": {
       "integrity": "sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==",
       "dependencies": [
@@ -3348,6 +3362,12 @@
         "call-bind",
         "es-errors",
         "is-regex"
+      ]
+    },
+    "sass-formatter@0.7.9": {
+      "integrity": "sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==",
+      "dependencies": [
+        "suf-log"
       ]
     },
     "section-matter@1.0.0": {
@@ -3459,6 +3479,12 @@
     },
     "signal-exit@4.1.0": {
       "integrity": "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw=="
+    },
+    "simple-icons-astro@13.16.0_astro@4.16.10__@babel+core@7.26.0__typescript@5.6.3__vite@5.4.10__zod@3.23.8_typescript@5.6.3_@types+node@22.5.4": {
+      "integrity": "sha512-W8A9VzXCQ5VGUpqaVjqNRkIUuUydPnQWsXhwjgN1zv018kMK1fUzp3Wbhdl51ISs6QIroT7QaEO/u95y5IaEKA==",
+      "dependencies": [
+        "astro@4.16.10_@babel+core@7.26.0_typescript@5.6.3_vite@5.4.10_zod@3.23.8_@types+node@22.5.4_vite@5.4.10__@types+node@22.5.4"
+      ]
     },
     "simple-swizzle@0.2.2": {
       "integrity": "sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==",
@@ -3607,6 +3633,12 @@
         "mz",
         "pirates",
         "ts-interface-checker"
+      ]
+    },
+    "suf-log@2.5.3": {
+      "integrity": "sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==",
+      "dependencies": [
+        "s.color"
       ]
     },
     "supports-color@5.5.0": {
@@ -4214,8 +4246,10 @@
         "npm:clsx@2",
         "npm:npm-run-all@^4.1.5",
         "npm:preact@^10.24.3",
+        "npm:prettier-plugin-astro@~0.14.1",
         "npm:prettier@^3.3.3",
         "npm:sharp@~0.33.5",
+        "npm:simple-icons-astro@^13.16.0",
         "npm:tailwindcss@^3.4.14",
         "npm:typescript@^5.6.3"
       ]

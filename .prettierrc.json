@@ -1,4 +1,13 @@
 {
-	"plugins": ["prettier-plugin-astro"],
-	"semi": false
+	"semi": false,
+	"requirePragma": true,
+	"overrides": [
+		{
+			"files": "**/*.astro",
+			"options": {
+				"plugins": ["prettier-plugin-astro"],
+				"parser": "astro"
+			}
+		}
+	]
 }

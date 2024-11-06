@@ -4,5 +4,6 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
 		"allowImportingTsExtensions": true
-	}
+	},
+	"exclude": ["node_modules", "dist"]
 }

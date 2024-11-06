@@ -7,17 +7,17 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "run-s --continue-on-error lint:*",
-    "lint:types": "tsc -b",
+    "lint": "run-s --continue-on-error \"lint:*\"",
     "lint:astro": "astro check",
-    "lint:eslint": "echo todo",
-    "lint:prettier": "prettier . --cache --write --list-different"
+    "lint:lint": "deno lint",
+    "lint:prettier": "deno fmt && prettier . --cache --write --list-different"
   },
   "dependencies": {
     "@deno/astro-adapter": "^0.1.5",
     "@fontsource/fira-sans": "^5.0.11",
     "@fontsource/fira-sans-condensed": "^5.0.8",
-    "clsx": "^2.0.0"
+    "clsx": "^2.0.0",
+    "simple-icons-astro": "^13.16.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
