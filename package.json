@@ -6,6 +6,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "astro": "astro",
     "lint": "run-s --continue-on-error lint:*",
     "lint:types": "tsc -b",
     "lint:astro": "astro check",
@@ -13,6 +14,7 @@
     "lint:prettier": "prettier . --cache --write --list-different"
   },
   "dependencies": {
+    "@deno/astro-adapter": "^0.1.5",
     "@fontsource/fira-sans": "^5.0.11",
     "@fontsource/fira-sans-condensed": "^5.0.8",
     "clsx": "^2.0.0"
@@ -26,6 +28,7 @@
     "npm-run-all": "^4.1.5",
     "preact": "^10.24.3",
     "prettier": "^3.3.3",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   }
