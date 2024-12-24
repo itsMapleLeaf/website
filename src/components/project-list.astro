@@ -1,51 +1,62 @@
 ---
-import ExternalLink from "./external-link.astro"
-import { linkStyle } from "../styles/common"
 import { Image } from "astro:assets"
+import { linkStyle } from "../styles/common"
+import ExternalLink from "./external-link.astro"
 
 const projects = [
-  {
-    name: "anigreen",
-    description: "track watched anime on a weekday basis",
-    url: "https://anigreen.mapleleaf.dev",
-    source: "https://github.com/itsMapleLeaf/anigreen",
-    image: import("../assets/anigreen.png").then((m) => m.default),
-  },
-  {
-    name: "reacord",
-    description: "render discord messages with react",
-    url: "https://reacord.mapleleaf.dev",
-    source: "https://github.com/itsMapleLeaf/reacord",
-    image: import("../assets/reacord.png").then((m) => m.default),
-  },
-].sort((a, b) => a.name.localeCompare(b.name))
+	{
+		name: "forest project",
+		description: "a silly musician friend group from another world",
+		url: "https://forest.mapleleaf.dev",
+		// source: "https://github.com/itsMapleLeaf/reacord",
+		image: import("../assets/forest.png"),
+	},
+	{
+		name: "reacord",
+		description: "render discord messages with react",
+		url: "https://reacord.mapleleaf.dev",
+		source: "https://github.com/itsMapleLeaf/reacord",
+		image: import("../assets/reacord.png"),
+	},
+	{
+		name: "anigreen",
+		description: "track watched anime on a weekday basis",
+		url: "https://anigreen.mapleleaf.dev",
+		source: "https://github.com/itsMapleLeaf/anigreen",
+		image: import("../assets/anigreen.png"),
+	},
+]
 ---
 
 <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-  {
-    projects.map(async (project) => (
-      <article class="grid gap-3 overflow-clip rounded-md bg-black/50 p-4 shadow-lg">
-        <h3 class="font-condensed text-3xl font-light">{project.name}</h3>
-        <div class="-mx-4">
-          <Image
-            src={await project.image}
-            alt={`a screenshot of ${project.name}`}
-            class="aspect-[18/9] object-cover"
-          />
-        </div>
-        <p>{project.description}</p>
-        <p>
-          <ExternalLink class={linkStyle} href={project.url}>
-            website
-          </ExternalLink>{" "}
-          <span aria-hidden class="inline-block translate-y-px px-[2px]">
-            &bullet;
-          </span>{" "}
-          <ExternalLink class={linkStyle} href={project.source}>
-            source
-          </ExternalLink>
-        </p>
-      </article>
-    ))
-  }
+	{
+		projects.map(async (project) => (
+			<article class="grid gap-3 overflow-clip rounded-md bg-black/50 p-4 shadow-lg">
+				<h3 class="font-condensed text-3xl font-light">{project.name}</h3>
+				<div class="-mx-4">
+					<Image
+						src={project.image}
+						alt={`a screenshot of ${project.name}`}
+						class="aspect-[16/9] object-cover"
+					/>
+				</div>
+				<p>{project.description}</p>
+				<p>
+					<ExternalLink class={linkStyle} href={project.url}>
+						website
+					</ExternalLink>{" "}
+					{project.source && (
+						<>
+							<span aria-hidden class="inline-block translate-y-px px-[2px]">
+								&bullet;
+							</span>{" "}
+							<ExternalLink class={linkStyle} href={project.source}>
+								source
+							</ExternalLink>
+						</>
+					)}
+				</p>
+			</article>
+		))
+	}
 </div>
