@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks"
 import { shuffle, sleep } from "../helpers/common.ts"
 
 const likes = shuffle([
-  "working with the Astro team 💜",
+  "having worked with the Astro team 💜",
   "using TypeScript",
   "using Convex",
   "using Godot",
